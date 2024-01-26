@@ -178,7 +178,7 @@ body {
     text-align: start;
 }
 
-.team .head h1 {
+.team .head h2 {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
@@ -199,7 +199,7 @@ body {
     align-items: center;
 }
 
-.team .cards .items h1 {
+.team .cards .items h2 {
     color: green;
     text-align: start;
 }
