@@ -1,7 +1,7 @@
 /* CSS */
 body {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,30 +205,30 @@ body {
     
     /* For tablets */
     @media (max-width: 768px) {
-    .mani-4 {
+    .main-4 {
     flex-direction: column;
     }
     
-    .mani-4 .content {
+    .main-4 .content {
     order: 2;
     }
     
-    .mani-4 img {
+    .main-4 img {
     order: 1;
     }
     }
     
     /* For mobile devices */
     @media (max-width: 480px) {
-    .mani-4 {
+    .main-4 {
     flex-direction: column;
     }
     
-    .mani-4 .content {
+    .main-4 .content {
     order: 2;
     }
     
-    .mani-4 img {
+    .main-4 img {
     order: 1;
     }
     }
@@ -236,7 +236,6 @@ body {
     .team .cards {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
     
     .team .cards .head {
@@ -247,7 +246,7 @@ body {
     }
     
     .team .cards .items {
-        flex-basis: calc(50% - 10px);
+        flex-basis: calc(40% - 10px);
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -275,3 +274,77 @@ body {
             flex-basis: 100%;
         }
     }
+
+   .footer .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .content ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-right: 50px; /* Adds space to the right of the links */
+}
+
+.footer .content ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer .content ul li i {
+    margin-right: 10px;
+}
+
+.footer .image-footer {
+    order: 1;
+}
+
+/* Media Queries for different screen sizes */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .footer .content {
+        flex-direction: column;
+    }
+
+    .footer .content ul {
+        text-align: center;
+        margin-right: 0; /* Removes the space to the right of the links on tablets */
+    }
+
+    .footer .content ul li {
+        justify-content: center;
+    }
+
+    .footer .image-footer {
+        order: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .footer .content {
+        flex-direction: column;
+    }
+
+    .footer .content ul {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .footer .content ul li {
+        justify-content: center;
+    }
+
+    .footer .image-footer {
+        order: 0;
+        margin-bottom: 20px;
+    }
+}
