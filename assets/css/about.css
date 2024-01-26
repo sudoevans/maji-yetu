@@ -137,6 +137,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 50px;
+    padding-bottom: 50px;
 
     }
     
@@ -208,7 +209,7 @@ body {
         font-weight: bold;
         font-size: 40px;
         font-family: Arial, Helvetica, sans-serif;
-        padding-bottom: 40px;
+        padding-bottom: 50px;
     }
     
     .main-4 h1, .main-4 p {
@@ -264,7 +265,13 @@ body {
         display: flex;
         flex-wrap: wrap;
     }
+    .team .head h1{
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 50px;
+    }
     
+
     .team .cards .head {
         display: flex;
         justify-content: center;
@@ -278,6 +285,12 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .team .cards .items h1{
+        color: green;
+    }
+    .team .cards .items p{
+        color: rgb(111, 111, 131);
     }
     
     .team .cards .items img {
