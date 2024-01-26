@@ -10,7 +10,13 @@ body {
     padding-left: 100px;
     padding-right: 100px;
 }
+.navbar {
+    height: 100px; 
+}
 
+.logo {
+    height: 100px; 
+}
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     body {
