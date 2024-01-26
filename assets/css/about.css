@@ -7,8 +7,8 @@ body {
 
 /* Default styles for larger screens */
 body {
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 /* Media query for smaller screens */
