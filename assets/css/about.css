@@ -264,18 +264,30 @@ body {
     .team .cards {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
-    .team .head h1{
+    
+
+    /* TEAM */
+    .team .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+    }
+    
+    .team .head h1 {
         font-weight: bold;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 50px;
     }
     
-
     .team .cards .head {
         display: flex;
         justify-content: center;
-        text-align: center;
+        text-align: start;
         width: 100%;
     }
     
@@ -286,11 +298,15 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    .team .cards .items h1{
+    
+    .team .cards .items h1 {
         color: green;
+        text-align: start;
     }
-    .team .cards .items p{
+    
+    .team .cards .items p {
         color: rgb(111, 111, 131);
+        text-align: start;
     }
     
     .team .cards .items img {
@@ -314,77 +330,76 @@ body {
             flex-basis: 100%;
         }
     }
-
-   .footer .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer .content ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin-right: 50px; /* Adds space to the right of the links */
-}
-
-.footer .content ul li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.footer .content ul li i {
-    margin-right: 10px;
-}
-
-.footer .image-footer {
-    order: 1;
-}
-
-/* Media Queries for different screen sizes */
-
-/* For tablets */
-@media (max-width: 768px) {
     .footer .content {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-
+    
     .footer .content ul {
-        text-align: center;
-        margin-right: 0; /* Removes the space to the right of the links on tablets */
-    }
-
-    .footer .content ul li {
-        justify-content: center;
-    }
-
-    .footer .image-footer {
-        order: 0;
-        margin-bottom: 20px;
-    }
-}
-
-/* For mobile devices */
-@media (max-width: 480px) {
-    .footer .content {
+        display: flex;
         flex-direction: column;
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        margin-right: 50px; /* Adds space to the right of the links */
     }
-
-    .footer .content ul {
-        text-align: center;
-        margin-right: 0;
-    }
-
+    
     .footer .content ul li {
-        justify-content: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
     }
-
+    
+    .footer .content ul li i {
+        margin-right: 10px;
+    }
+    
     .footer .image-footer {
-        order: 0;
-        margin-bottom: 20px;
+        order: 1;
     }
-}
+    
+    /* Media Queries for different screen sizes */
+    
+    /* For tablets */
+    @media (max-width: 768px) {
+        .footer .content {
+            flex-direction: column;
+        }
+    
+        .footer .content ul {
+            text-align: center;
+            margin-right: 0; /* Removes the space to the right of the links on tablets */
+        }
+    
+        .footer .content ul li {
+            justify-content: center;
+        }
+    
+        .footer .image-footer {
+            order: 0;
+            margin-bottom: 20px;
+        }
+    }
+    
+    /* For mobile devices */
+    @media (max-width: 480px) {
+        .footer .content {
+            flex-direction: column;
+        }
+    
+        .footer .content ul {
+            text-align: center;
+            margin-right: 0;
+        }
+    
+        .footer .content ul li {
+            justify-content: center;
+        }
+    
+        .footer .image-footer {
+            order: 0;
+            margin-bottom: 20px;
+        }
+    }
