@@ -1,10 +1,26 @@
 /* CSS */
 body {
-    padding-left: 300px;
-    padding-right: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/* Default styles for larger screens */
+body {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .container {
+        max-width: 100%; /* Set to 100% to make it fluid */
+    }
 }
 
 .container {
@@ -12,6 +28,7 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+
 
 .header-content {
     display: flex;
