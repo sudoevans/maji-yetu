@@ -47,17 +47,13 @@ ul{
     display: flex;
     flex-direction: column;
     background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 60%;
-    margin-left: 50px;  }
-  
+}  
   .title {
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: #fff;
+    color: #137c29;
   }
   
   .description {
@@ -116,3 +112,22 @@ ul{
     border: none;
     outline: none;
   }
+
+  .footer-text-left{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.copy-right{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 20px;
+   
+
+}
+
+.quote{
+    text-align: start;
+}
+

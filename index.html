@@ -51,8 +51,8 @@
     <div class="socials row">
         <ul class="col">
             <li> <button>Join the Movement</button></li>
-            <li>Facebook</li>
-            <li>Twitter</li>
+            <li >Facebook</li>
+            <li></li>
             <li>Instagram</li>
         </ul>
 
@@ -120,35 +120,42 @@
 
 <!-- Get involved ends here -->
 
-<section class="img-text post">
+<section id="posts" class="pt-3">
     <!-- a div with a video on left side and text on right side -->
-    <div class="post">
-        <div class="post-video">
-            <img src="./assets/images/post-image.png" alt="">
-        </div>
-        <div class="post-text">
-            <h2>Climate Change effects on drought</h2>
-            <p class="quote">
-                At MajiYetu, we believe that water is life. We are a non-profit organization that works with communities in Kenya to provide access to clean water and sanitation. Our mission is to empower communities to build sustainable water systems that will improve their health and livelihoods.
-            </p>
-
-            <a href="" class="green">read more</a>
-
-        </div> 
+    <div class="container row text-center">
+        <div class="col">
+                <img height="50%" src="./assets/images/post-image.png" alt="Post Image">
+            </div>
+            <div class="col text-left">
+                <h2>Climate Change effects on drought</h2>
+                <p class="quote">
+                    At MajiYetu, we believe that water is life. We are a non-profit organization that works with communities in Kenya to provide access to clean water and sanitation. Our mission is to empower communities to build sustainable water systems that will improve their health and livelihoods.
+                </p>
+    
+                <a href=""  style="text-decoration: none;" >read more</a>
+    
+            </div> 
+    </div>
 
 </section>
 
 
 <!-- subscribe section -->
 <section id="subscribe">
-    <form class="form">
-        <span class="title">Subscribe to our newsletter.</span>
-        <div>
-          <input placeholder="Enter your email" type="email" name="email" id="email-address">
-          <button type="submit">Subscribe</button>
+        <div class="container pb-5">
+                <form class="form">
+                        <div class="text-center"> <!-- Add the "text-center" class here -->
+                                <span class="title">Subscribe to our newsletter.</span>
+                                <div class="text"></div>
+                        </div>
+                        <div>
+                            <input placeholder="Enter your email" type="email" name="email" id="email-address">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
         </div>
-      </form>
-    </div>
+     
 
 </section>
 <!-- subscribe section ends here -->
@@ -156,19 +163,16 @@
 
 <!-- Footer section starts here -->
 <section id="footer">
-
-    <h2>MajiYetu</h2>
-    <div class="img-text">
-        <div class="text-left">
-            <div class="footer-socials">
+        <div class="footer-text-left">
+            <div class="footer-socials pt-4">
                 <ul>
-                    <li>Email</li>
-                    <li>Facebook</li>
-                    <li>X</li>
-                    <li>Instagram</li>
+                    <li><b>Email</b></li>
+                    <li><b>Facebook</b></li>
+                    <li><b>X</b></li>
+                    <li> <b>Instagram</b></li>
                 </ul>
             </div>
-            <div class="footer-socials">
+            <div class="footer-socials pt-4">
                 <ul>
                     <li>info@majiyetufoundation.org</li>
                     <li>Majiyetuofficial</li>
@@ -179,11 +183,13 @@
             </div>
         
             <div class="img-right">
-                <img src="./assets/images/global-warming.png" alt="">
+                <img height="150px" class="rounded float-end" src="./assets/images/global-warming.png" alt="">
             </div>
         </div>
 
     </div>
+    <div class="copy-right">
+        <h5>© 2024 MajiYetu Foundation</h5>
 
 
 </section>
