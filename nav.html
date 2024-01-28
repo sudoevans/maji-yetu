@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Navigation Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 300px;
+            padding-left: 300px;
+        }
+        
+        header {
+            position: relative;
+            width: 100%;
+            height: calc(50vh - 50px);
+            display: flex;
+            justify-content: flex-start; /* Keep the content aligned to the left */
+            background-color: #f8f9fa;
+            padding-left: 10%;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            z-index: 1;
+            padding-right: 300px;
+            padding-left: 410px;
+        }
+        
+        .content{
+            padding-right: 300px;
+            padding-left: 300px;
+        }
+        nav ul,
+        header .content {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        nav ul li {
+            margin-right: 50px;
+            padding-top: 110px;
+            padding-left: 80px;
+        }
+        
+        #split-image {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 25%;
+            height: auto;
+            padding-right: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            #split-image {
+                width: 100%;
+                height: auto;
+            }
+            nav ul li {
+                margin-right: 10px;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><img src="assets/images/logo.png" alt=""></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Projects</li>
+        </ul>
+        <img src="assets/images/hero.png" alt="Example Image" id="split-image">
+    </nav>
+    <header>
+        <div class="content">
+            <h1>Where Water Flows <br> Communities Grow !</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eaque asperiores voluptatem autem optio ea odio rem quidem impedit saepe.</p>
+        </div>
+    </header>
+</body>
+</html>
