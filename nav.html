@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Navigation Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        header {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            background-color: #f8f9fa;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+            color: black;
+        }
+        #split-image {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            height: calc(100% - 50px);
+        }
+        @media (max-width: 768px) {
+            #split-image {
+                width: 100%;
+                height: auto;
+            }
+            nav ul li {
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <img src="assets/images/hero.png" alt="Example Image" id="split-image">
+    </header>
+    <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore placeat necessitatibus repudiandae ullam voluptatibus, consectetur quisquam odio veritatis, sit aut enim repellendus officia? Doloremque minima rerum ratione quis temporibus ea?</h1>
+</body>
+</html>
