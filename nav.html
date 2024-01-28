@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Split Navigation Example</title>
+    <title>Custom Navigation Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body, html {
             margin: 0;
@@ -13,65 +14,45 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding-right: 300px;
-            padding-left: 300px;
-        }
-        
-        header {
-            position: relative;
-            width: 100%;
-            height: calc(50vh - 50px);
-            display: flex;
-            justify-content: flex-start; /* Keep the content aligned to the left */
-            background-color: #f8f9fa;
-            padding-left: 10%;
         }
         
         nav {
-            position: fixed;
+            position: fixed; 
             top: 0;
             left: 0;
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            right: 0;
             background-color: white;
             z-index: 1;
-            padding-right: 300px;
-            padding-left: 410px;
+            padding-right: 50px; 
+            padding-left: 50px; 
+            height: 40px; 
         }
         
-        .content{
-            padding-right: 300px;
-            padding-left: 300px;
-        }
         nav ul,
-        header .content {
+        .content {
             display: flex;
             list-style: none;
             padding: 0;
             width: 50%;
-            justify-content: center;
             align-items: center;
             color: black;
-            font-size: 20px;
+            font-size: 16px; 
             font-weight: bold;
+            margin: 0; 
         }
         
         nav ul li {
-            margin-right: 50px;
-            padding-top: 110px;
-            padding-left: 80px;
+            margin-right: 20px; 
+            padding-top: 0; 
+            padding-left: 20px; 
         }
         
         #split-image {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 25%;
+            width: 50%;
+            padding-top: 400px;
             height: auto;
-            padding-right: 30px;
+            
+            
         }
         
         @media (max-width: 768px) {
@@ -81,29 +62,61 @@
             }
             nav ul li {
                 margin-right: 10px;
+                padding-left: 10px; /* Adjusted padding-left */
             }
         }
         
-        
+        .content {
+            position: absolute;
+            top: 40px; /* Adjusted top */
+            left: 0;
+            padding-top: 200px;
+            padding-left: 10%;
+            text-align: left;
+            width: 100%;
+        }
+
+        header{
+          padding-top: 40px;
+          position: fixed;
+          top: 0;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><img src="assets/images/logo.png" alt=""></li>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Projects</li>
-        </ul>
-        <img src="assets/images/hero.png" alt="Example Image" id="split-image">
-    </nav>
-    <header>
-        <div class="content">
-            <h1>Where Water Flows <br> Communities Grow !</h1>
-            <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eaque asperiores voluptatem autem optio ea odio rem quidem impedit saepe.</p>
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+          </ul>
+          <img src="assets/images/hero.png" alt="Example Image" id="split-image">
         </div>
-    </header>
+      </div>
+    </nav>
+    
+    <div class="content d-flex flex-column align-items-start">
+      <h1>Where Water Flows <br> Communities Grow!</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> At eaque asperiores voluptatem autem optio ea odio rem quidem impedit saepe.</p>
+  </div>
+   </header>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
