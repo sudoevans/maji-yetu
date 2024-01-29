@@ -1,0 +1,93 @@
+<style>
+            .small-image{
+                max-height: 160px;
+            }
+
+                body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        nav {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            right: 0;
+            /* z-index: 1; */
+            padding-right: 50px; 
+            padding-left: 50px; 
+            height: 40px; 
+        }
+        
+        nav ul,
+        .content {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            width: 50%;
+            align-items: center;
+            color: black;
+            font-size: 16px; 
+            font-weight: bold;
+            margin: 0; 
+        }
+        
+        nav ul li {
+            margin-right: 20px; 
+            padding-top: 0; 
+            padding-left: 20px; 
+        }
+        
+        #split-image {
+            width: 50%;
+            padding-top: 400px;
+            height: auto;
+            
+            
+        }
+        
+        @media (max-width: 768px) {
+            #split-image {
+                width: 100%;
+                height: auto;
+            }
+            nav ul li {
+                margin-right: 10px;
+                padding-left: 10px; /* Adjusted padding-left */
+            }
+        }
+        
+        .content {
+        top: 40px; /* Adjusted top */
+        left: 0;
+        padding-top: 100px; /* Adjusted padding-top */
+        padding-left: 10%;
+        text-align: left;
+        width: 100%;
+            
+        }
+
+        header{
+          padding-top: 40px;
+          position: fixed;
+          top: 0;
+        }
+
+        .content {
+      width: 50%;
+      text-align: left;
+      padding-left: 10%;
+    }
+    h1 {
+      margin-bottom: 80px;
+    }
+
+    .custom-navbar {
+      background-color: white;
+    }
+        </style>
