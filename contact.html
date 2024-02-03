@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+</head>
+<body>
+    <!-- BEGIN: Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="./index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./projects.html">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- END: Header -->
+
+    <!-- Contact form here -->
+    <div class="container mt-5 col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <form id="contact-form" class="form" onsubmit="event.preventDefault(); submitForm();">
+                    <div class="flex">
+                        <label>
+                            <input required="" placeholder="" type="text" class="input" name="first-name">
+                            <span>first name</span>
+                        </label>
+                        <label>
+                            <input required="" placeholder="" type="text" class="input" name="last-name">
+                            <span>last name</span>
+                        </label>
+                    </div>
+                    <label>
+                        <input required="" placeholder="" type="email" class="input" name="email">
+                        <span>email</span>
+                    </label>
+                    <label>
+                        <input required="" type="tel" placeholder="" class="input" name="contact-number">
+                        <span>contact number</span>
+                    </label>
+                    <label>
+                        <textarea required="" rows="3" placeholder="" class="input01" name="message"></textarea>
+                        <span>message</span>
+                    </label>
+                    <button class="fancy" type="submit">
+                        <span class="top-key"></span>
+                        <span class="text">submit</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/images/contact.svg" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- END: Contact form -->
+
+    <!-- BEGIN: Footer -->
+    <footer>
+        <!-- Footer section starts here -->
+        <section id="footer">
+            <div class="footer-text-left">
+                <div class="footer-socials pt-4">
+                    <ul>
+                        <li><b>Email</b></li>
+                        <li><b>Facebook</b></li>
+                        <li><b>X</b></li>
+                        <li> <b>Instagram</b></li>
+                    </ul>
+                </div>
+                <div class="footer-socials pt-4">
+                    <ul>
+                        <li>info@majiyetufoundation.org</li>
+                        <li>Majiyetuofficial</li>
+                        <li>majiyetu_official</li>
+                        <li>majiyetuoficial</li>
+                    </ul>
+
+                </div>
+
+                <div class="img-right">
+                    <img height="150px" class="rounded float-end" src="./assets/images/global-warming.png" alt="">
+                </div>
+            </div>
+            <div class="copy-right">
+                <h5>© 2024 Eco-Hydrate Foundation</h5>
+            </div>
+        </section>
+        <!-- Footer section ends here -->
+    </footer>
+    <!-- END: Footer -->
+
+
+    <script>
+        function submitForm() {
+            // Perform form submission logic here
+            
+            // Get form data
+            var firstName = document.querySelector('input[name="first-name"]').value;
+            var lastName = document.querySelector('input[name="last-name"]').value;
+            var email = document.querySelector('input[name="email"]').value;
+            var contactNumber = document.querySelector('input[name="contact-number"]').value;
+            var message = document.querySelector('textarea[name="message"]').value;
+            
+            // Send email to info@sume.org
+            var emailBody = "First Name: " + firstName + "\n" +
+                            "Last Name: " + lastName + "\n" +
+                            "Email: " + email + "\n" +
+                            "Contact Number: " + contactNumber + "\n" +
+                            "Message: " + message;
+            var mailtoLink = "mailto:info@majiyetufoundation.org?subject=Contact Form Submission&body=" + encodeURIComponent(emailBody);
+            window.location.href = mailtoLink;
+            
+            // Display thank you message
+            var form = document.getElementById("contact-form");
+            form.innerHTML = "<h2>Thank you! Someone will reach out!</h2>";
+        }
+    </script>
+</body>
+</html>
